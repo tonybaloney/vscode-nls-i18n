@@ -1,4 +1,3 @@
-import * as fs from "fs";
 import * as path from "path";
 import * as vscode from "vscode";
 
@@ -9,6 +8,8 @@ interface IConfig {
 interface ILanguagePack {
   [key: string]: string;
 }
+
+const fs = vscode.workspace.fs;
 
 export class Localize {
   private bundle: ILanguagePack;
